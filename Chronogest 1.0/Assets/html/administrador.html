@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Chronogest</title>
+    <link  rel="stylesheet" href="./Assets/css/administrador.css">
+    
+</head>
+<body>
+    <header>
+        <a href="#" class="back-button">←</a>
+        <div class="nav-menu">
+            <a href="#">Inicio</a>
+            <a href="#" class="active">Registro</a>
+            <a href="#">Salir <span>→</span></a>
+        </div>
+        <img src="./Assets/img/true.png" alt="Logo SENA" class="logo">
+    </header>
+
+    <div class="sidebar">
+        <div class="admin-label">Admin</div>
+        <div class="search-box">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        
+        <div class="sidebar-menu">
+            <div class="menu-item" onclick="toggleSubmenu('config')">
+                <span>⚙️</span>
+                <span>Configuración</span>
+            </div>
+            <div class="submenu" id="config-submenu">
+                <div class="submenu-item" onclick="showSection('rol-usuario')">Rol de Usuario</div>
+                <div class="submenu-item" onclick="showSection('permisos-menu')">Permisos del Menú</div>
+            </div>
+
+        
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1 class="page-title admin-title">Configuración Administrador</h1>
+        <h1 class="page-title instructor-title">Configuración Instructor</h1>
+        <h1 class="page-title aprendiz-title">Configuración Aprendiz</h1>
+
+        <div class="role-selector-container">
+            <label for="roleSelect" class="role-selector-label">Seleccionar Rol:</label>
+            <select id="roleSelect" class="role-selector" onchange="handleRoleChange()">
+                <option value="aprendiz">Aprendiz</option>
+                <option value="instructor">Instructor</option>
+                <option value="admin">Administrador</option>
+            </select>
+        </div>
+
+        <div class="menu-controls">
+            <div class="menu-dots">⋮</div>
+        </div>
+
+        <div class="permissions-grid">
+            <!-- Aprendiz -->
+            <div class="permission-card" data-permission="mis-horarios" data-role="aprendiz">
+                <div class="lock-icon locked">🔒</div>
+                
+                <h3>Mis Horarios</h3>
+            </div>
+            <div class="permission-card" data-permission="asistencias" data-role="aprendiz">
+                <div class="lock-icon locked">🔒</div>
+                
+                <h3>Asistencias</h3>
+            </div>
+            <div class="permission-card" data-permission="eventos-mes" data-role="aprendiz,instructor">
+                <div class="lock-icon locked">🔒</div>
+                
+                <h3>Eventos del Mes</h3>
+            </div>
+            
+            <!-- Admin -->
+            <div class="permission-card" data-permission="crear-horario" data-role="admin,instructor">
+                <div class="lock-icon locked">🔒</div>
+        
+                <h3>Crear Horario</h3>
+            </div>
+            <div class="permission-card" data-permission="solicitud-instructores" data-role="admin">
+                <div class="lock-icon locked">🔒</div>
+            
+                <h3>Solicitud de Instructores</h3>
+            </div>
+            <div class="permission-card" data-permission="registro-usuarios" data-role="admin">
+                <div class="lock-icon locked">🔒</div>
+            
+                <h3>Registro de Usuarios</h3>
+            </div>
+            
+            <!-- Instructor -->
+            <div class="permission-card" data-permission="horario-personalizado" data-role="instructor">
+                <div class="lock-icon locked">🔒</div>
+            
+                <h3>Horario Personalizado</h3>
+            </div>
+            <div class="permission-card" data-permission="solicitar-cambio" data-role="instructor">
+                <div class="lock-icon locked">🔒</div>
+            
+                <h3>Solicitar Cambio Horario</h3>
+            </div>
+            
+            <!-- Otras opciones -->
+            <div class="permission-card" data-permission="editar-horario" data-role="admin">
+                <div class="lock-icon locked">🔒</div>
+        
+                <h3>Editar Horario</h3>
+            </div>
+            <div class="permission-card" data-permission="notificaciones" data-role="admin">
+                <div class="lock-icon locked">🔒</div>
+            
+                <h3>Notificaciones</h3>
+            </div>
+            <div class="permission-card" data-permission="config-usuarios" data-role="admin">
+                <div class="lock-icon locked">🔒</div>
+        
+                <h3>Configuración de Usuarios</h3>
+            </div>
+            <div class="permission-card" data-permission="permisos-menu" data-role="admin">
+                <div class="lock-icon locked">🔒</div>
+    
+                <h3>Permisos del Menú</h3>
+            </div>
+        </div>
+
+        <button class="next-button" onclick="saveChanges()">Siguiente</button>
+    </div>
+
+    <div class="notification" id="notification">Cambios guardados correctamente</div>
+
+    <script src="./Assets/js/administrador.js"></script>
+    
+</body>
+</html>

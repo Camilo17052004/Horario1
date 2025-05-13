@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="/Assets/css/estilo-inicio.css">
+</head>
+<body>
+    <img src="/Assets/img/true.png" alt="Logo SENA" class="logo">
+    
+    
+    <h1>Bienvenido a Chronogest</h1>
+    
+    <div id="mensajeError"></div>
+    
+    <div class="login-container">
+        <div class="loginIzquierda">
+            <h3>¿Nuevo Usuario?</h3>
+            <p class="registrarseLogin">Inicia sesión ahora mismo dando click al botón</p>
+            <p class="textoPequeño">(Requiere Intervención de administrador)</p>
+            <a href="/Assets/html/registro.html"><button type="button">Registrar</button></a>
+        </div>
+        
+        <div class="loginDerecha">
+            <form id="validarCampos">
+                <input type="text" id="usuarioLogin" placeholder="Ingresar usuario" required>
+                <input type="email" id="correoLogin" placeholder="Ingresar Email" required>
+                <input type="password" id="contraseñaLogin" placeholder="Ingresar contraseña" required>
+                <button type="submit" class="botonLogin">Ingresar</button>
+                <div class="olvidoContraseña">
+                    <a id="olvidoContraseñaLink" href="javascript:void(0);">¿Olvidaste tu contraseña?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Menú flotante para cambio de contraseña -->
+    <div id="menuCambioContraseña" class="flotante">
+        <h3>Cambiar contraseña</h3>
+        <form id="formCambioContraseña">
+            <label for="correoCambio">Correo registrado:</label>
+            <input type="email" id="correoCambio" placeholder="Ingrese email" required>
+            <button type="submit">Validar correo</button>
+            <p id="mensajeValidacionCorreo" class="error"></p>
+        </form>
+    </div>
+
+
+    <script src="/Assets/js/login.js"></script>
+</body>
+</html

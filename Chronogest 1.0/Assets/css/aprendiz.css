@@ -1,0 +1,323 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            width: 280px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            height: 100vh;
+            position: fixed;
+        }
+        
+        .user-type {
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin: 10px;
+            background-color: #34495e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .user-type .arrow {
+            transition: transform 0.3s;
+        }
+        
+        .search-box {
+            padding: 10px;
+            margin: 10px;
+            background-color: #34495e;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            width: 100%;
+            padding: 5px;
+            outline: none;
+        }
+        
+        .menu-item {
+            margin: 5px 10px;
+            cursor: pointer;
+        }
+        
+        .menu-header {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+        
+        .menu-header:hover {
+            background-color: #34495e;
+        }
+        
+        .menu-header .arrow {
+            transition: transform 0.3s;
+        }
+        
+        .submenu {
+            padding-left: 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .submenu-item {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        
+        .submenu-item:hover {
+            background-color: #34495e;
+        }
+        
+        .rotate {
+            transform: rotate(180deg);
+        }
+        
+        .content {
+            margin-left: 280px;
+            flex: 1;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .header-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .header-links a {
+            color: #2ecc71;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        
+        .header-links a:last-child {
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Admin view - first mockup */
+        .admin-view {
+            padding: 20px;
+            display: none;
+        }
+        
+        /* Attendance view - second mockup */
+        .attendance-view {
+            padding: 20px;
+            display: none;
+        }
+        
+        .attendance-table {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            border-collapse: collapse;
+        }
+        
+        .attendance-table th {
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .attendance-table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        .check-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #246b47;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        
+        .x-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #246b47;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        
+        .user-label {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: #2ecc71;
+            color: white;
+            border-radius: 20px;
+            margin: 10px 0;
+        }
+        
+        /* Calendar view - third mockup */
+        .calendar-view {
+            padding: 20px;
+            display: none;
+        }
+        
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .calendar-title {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .star-icon {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .close-icon {
+            background-color: white;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .calendar-table {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            border-collapse: collapse;
+        }
+        
+        .calendar-table th {
+            background-color: #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .calendar-table td {
+            height: 100px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+            padding: 5px;
+        }
+        
+        .event {
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 3px;
+        }
+        
+        .event-yellow {
+            background-color: #f1c40f;
+        }
+        
+        .event-red {
+            background-color: #e74c3c;
+        }
+        
+        .event-green {
+            background-color: #2ecc71;
+        }
+        
+        .event-legend {
+            display: flex;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        
+        .yellow {
+            background-color: #f1c40f;
+        }
+        
+        .red {
+            background-color: #e74c3c;
+        }
+        
+        .green {
+            background-color: #2ecc71;
+        }
+        
+        /* Default active view */
+        .attendance-view {
+            display: block;
+        }

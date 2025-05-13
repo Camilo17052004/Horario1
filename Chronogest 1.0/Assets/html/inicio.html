@@ -1,0 +1,79 @@
+<!-- Ejemplo de estructura para inicio.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Chronogest</title>
+    <link rel="stylesheet" href="/Assets/css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Chronogest - Sistema de Gestión</h1>
+        <div class="info-usuario">
+            <p>Usuario: <span id="nombreUsuario"></span></p>
+            <p>Rol: <span id="rolUsuario"></span></p>
+            <p>Correo: <span id="correoUsuario"></span></p>
+            <button id="btnCerrarSesion">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <nav class="menu-principal">
+        <!-- IMPORTANTE: Agrega las clases menu-admin, menu-usuario o menu-supervisor 
+             a los elementos que quieras mostrar/ocultar según el rol -->
+        <ul>
+            <!-- Elementos visibles para todos -->
+            <li><a href="inicio.html">Inicio</a></li>
+            
+            <!-- Solo visible para administradores -->
+            <li class="menu-admin"><a href="admin-usuarios.html">Administrar Usuarios</a></li>
+            <li class="menu-admin"><a href="admin-configuracion.html">Configuración del Sistema</a></li>
+            
+            <!-- Solo visible para supervisores -->
+            <li class="menu-supervisor"><a href="reportes.html">Reportes</a></li>
+            <li class="menu-supervisor"><a href="seguimiento.html">Seguimiento</a></li>
+            
+            <!-- Solo visible para usuarios estándar -->
+            <li class="menu-usuario"><a href="mis-tareas.html">Mis Tareas</a></li>
+            <li class="menu-usuario"><a href="solicitudes.html">Solicitudes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Bienvenido al Sistema</h2>
+            <p>Selecciona una opción del menú para comenzar.</p>
+        </section>
+        
+        <!-- Este contenedor solo se muestra para administradores -->
+        <div class="menu-admin">
+            <h3>Sección exclusiva para administradores</h3>
+            <div>
+                <h4>Lista de usuarios registrados:</h4>
+                <ul id="usuariosList">
+                    <!-- Aquí se cargarán los usuarios dinámicamente -->
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Este contenedor solo se muestra para supervisores -->
+        <div class="menu-supervisor">
+            <h3>Sección exclusiva para supervisores</h3>
+            <p>Aquí puedes ver estadísticas y reportes</p>
+        </div>
+        
+        <!-- Este contenedor solo se muestra para usuarios estándar -->
+        <div class="menu-usuario">
+            <h3>Sección exclusiva para usuarios</h3>
+            <p>Aquí puedes gestionar tus tareas y solicitudes</p>
+        </div>
+    </main>
+
+<ul id="usuariosList"></ul> <!-- Lista de usuarios -->
+
+    <script src="/Assets/js/inicio.js"></script>
+</body>
+</html>
+    <footer>
+        <p>&copy; 2025 Chronogest</p>
+    </footer>

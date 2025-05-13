@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Assets/css/aprendiz.css">
+</head>
+<body>
+    
+
+
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="user-type">
+                <span id="userTypeText">Aprendiz</span>
+                <span class="arrow">▼</span>
+            </div>
+            
+            <div class="search-box">
+                <span>🔍</span>
+                <input type="text" placeholder="Buscar...">
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-header" id="scheduleMenu">
+                    <span>📅 Mi Horario</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="submenu" id="scheduleSubmenu">
+                    <div class="submenu-item" onclick="switchView('attendance-view')">Visualizar</div>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-header" id="attendanceMenu">
+                    <span>✓ Asistencias</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="submenu" id="attendanceSubmenu">
+                    <div class="submenu-item" onclick="switchView('attendance-view')">Registro de Asistencia</div>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-header" id="eventsMenu">
+                    <span>🗓️ Eventos del Mes</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="submenu" id="eventsSubmenu">
+                    <div class="submenu-item" onclick="switchView('calendar-view')">Visualizar</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content" style="background-image: url('/api/placeholder/1600/900');">
+            <div class="header">
+                <div></div>
+                <div class="header-links">
+                    <a href="#">Inicio</a>
+                    <a href="./index.html">Salir ➜</a> 
+                </div>
+                <div class="logo">
+                    <img src="/Assets/img/true.png" alt="SENA logo">
+                </div>
+            </div>
+            
+            <!-- Admin View - First Mockup -->
+            <div class="admin-view" id="admin-view">
+                <!-- Admin content would go here -->
+            </div>
+            
+            <!-- Attendance View - Second Mockup -->
+            <div class="attendance-view" id="attendance-view">
+                <div class="user-label">Nilson</div>
+                <table class="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>Día</th>
+                            <th>Mes</th>
+                            <th>Año</th>
+                            <th>Registro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7</td>
+                            <td>10</td>
+                            <td>2025</td>
+                            <td>
+                                <div class="check-icon">✓</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>10</td>
+                            <td>2025</td>
+                            <td>
+                                <div class="x-icon">✗</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Calendar View - Third Mockup -->
+            <div class="calendar-view" id="calendar-view">
+                <div class="calendar-header">
+                    <div class="calendar-title">
+                        <span>Calendario de Mayo</span>
+                        <span class="star-icon">★</span>
+                    </div>
+                    <div class="close-icon">✕</div>
+                </div>
+                
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miercoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Eventos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="event event-yellow"></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="event event-red"></div>
+                            </td>
+                            <td rowspan="5">
+                                <div class="event-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-color yellow"></div>
+                                        <span>Evento 1</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color red"></div>
+                                        <span>Evento 2</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color green"></div>
+                                        <span>Evento 1</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="event event-green"></div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Assets/js/aprendiz.js"></script>
+</body>
+</html>

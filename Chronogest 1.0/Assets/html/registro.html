@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Chronogest</title>
+    <link rel="stylesheet" href="/Assets/css/estilos-registro.css">
+</head>
+<header>
+    <h4 class="identificadorRol">Administrador</h4>
+    <nav>
+    <a href="/Assets/html/registro.html" class="active">Registro</a>
+    <a href="/index.html">Login</a>
+    <a href="">Salir</a>
+    </nav>
+</header>
+<body>
+    <div class="contenedor-Datos personales">
+        <form id="llenarCampos">
+            <label for="nombre"> Nombre:</label>
+        <input type="text" id="nombre" placeholder="Ingrese Nombre completo" required>
+
+            <label for="usuario"> Usuario:</label>
+        <input type="text" id="nombreUsuario" placeholder="Agrega un usuario" required>
+
+            <label for="telefono"> Telefono:</label>
+        <input type="text" id="numeroTelefono" placeholder="Ingrese Numero de Telefono" required>
+
+            <label for="correo"> Correo:</label>
+        <input type="email" id="correo" placeholder="Ingrese correo electronico" required>
+
+            <label for="contraseña"> Contraseña:</label>
+        <input type="password" id="contraseña" placeholder="Crea una contraseña" required>
+
+            <label for="documento"> Tipo de documento:</label>
+        <select id="tiposDocumentos" required> 
+            <option value="tarjetaIdentidad"> Tarjeta de Identidad </option>
+            <option value="cedulaCiudadania"> Cedula de Ciudadanía </option>
+        </select>
+        <input type="text" id="numeroDocumento" placeholder="ingresa numero de documento" required >
+
+            <label for="rol"> Rol de usuario:</label>
+        <select id="roles" required> 
+            <option value="Administrador"> Administrador </option>
+            <option value="Instructor"> Instructor </option>
+            <option value="Aprendiz"> Aprendiz </option>
+        </select>
+
+    <a href="/Assets/html/inicio.html"><button type="submit">Registrar</button></a>
+        </form>
+    </div>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario - Chronogest</title>
+    <link rel="stylesheet" href="/Assets/css/estilos-registro.css">
+</head>
+<body>
+    <h1>Registro de Usuario - Chronogest</h1>
+    
+    <div id="mensajeError" style="display: none;"></div>
+    <div id="mensajeExito" style="display: none;"></div>
+    
+    <div class="formulario-container">
+        <form id="formularioRegistro">
+            <div class="campo">
+                <label for="usuarioRegistro">Nombre de Usuario:</label>
+                <input type="text" id="usuarioRegistro" placeholder="Ingresa tu nombre de usuario" required>
+            </div>
+            
+            <div class="campo">
+                <label for="correoRegistro">Correo Electrónico:</label>
+                <input type="email" id="correoRegistro" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+            
+            <div class="campo">
+                <label for="contraseñaRegistro">Contraseña:</label>
+                <input type="password" id="contraseñaRegistro" placeholder="Ingresa tu contraseña" required>
+            </div>
+            
+            <div class="campo">
+                <label for="confirmarContraseña">Confirmar Contraseña:</label>
+                <input type="password" id="confirmarContraseña" placeholder="Confirma tu contraseña" required>
+            </div>
+            
+            <div class="campo">
+                <label for="rolUsuario">Rol de Usuario:</label>
+                <select id="rolUsuario" required>
+                    <option value="">Seleccione un rol</option>
+                    <option value="administrador">Administrador</option>
+                    <option value="supervisor">Supervisor</option>
+                    <option value="usuario">Usuario</option>
+                </select>
+            </div>
+            
+            <div class="botones">
+                <button type="submit" class="boton-registro">Registrar</button>
+                <a href="./index.html" class="boton-cancelar">Cancelar</a>
+            </div>
+        </form>
+    </div>
+    
+    <script src="/Assets/js/registro.js"></script>
+</body>
+</html>
+    <script src="/Assets/js/registro.js"></script>
+</body>
+</html>
